@@ -1,0 +1,27 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 243px;
+    background-color: #FFEEF2;
+    padding: 23px 29px;
+    border: solid rgba(139, 137, 138, 0.5) 1px;
+    border-radius: 10px;
+}
+
+section h1 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #595758;
+}
+
+div {
+    display: flex;
+    gap: 15px;
+}
+
+div p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #595758;
+}
