@@ -3,6 +3,7 @@ import logo from './assets/images/logo.png'
 import './App.css'
 import Button from './components/button/Button'
 import Card from './components/Card/Card'
+import Input from './components/Input/input'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
                 </Btn>
             </form>
       </section> */}
-      <Card placa={"JKLIH-5F"} data={"27-08"} hora={"18:00"}/>
+     <Input placeholder={"E-mail"} password={true}/>
     </>
   )
 }
