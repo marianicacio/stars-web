@@ -1,8 +1,9 @@
 .container-card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 243px;
+    width: 100%;
     background-color: #FFEEF2;
     padding: 23px 29px;
     border: solid rgba(139, 137, 138, 0.5) 1px;

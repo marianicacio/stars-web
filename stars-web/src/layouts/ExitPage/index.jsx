@@ -1,9 +1,9 @@
 import logo from "../../assets/images/logo-two.png"
 import exit from "../../assets/images/logout.png"
 import planets from "../../assets/images/planets.png"
-import entry from "../../assets/images/enter.png"
 import Button from "../../components/button/Button"
 import Input from "../../components/Input/input"
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 export default function ExitPage() {
@@ -11,11 +11,11 @@ export default function ExitPage() {
         <>
             <div className="container-entry">
                 <header>
-                    <img src={logo} alt="" />
+                    <Link to={'/'}><img src={logo} alt="" /></Link>
                     <nav className="entry-nav">
-                        <a href="">Entrada</a>
-                        <a href="">Lista de Veículo</a>
-                        <a href="">Saída</a>
+                        <Link to={'/entry'}><a href="">Entrada</a></Link>
+                        <Link to={'/list'}><a href="">Lista de Veículo</a></Link>
+                        <Link to={'/exit'}><a href="">Saída</a></Link>
                     </nav>
                 <img src={planets} className="img-planets" alt="" />
                 </header>

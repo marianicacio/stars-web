@@ -7,6 +7,7 @@
 .container-entry {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     background-color: #FFEEF2;
     position: relative;
@@ -22,6 +23,8 @@
 
 .form-entry {
     display: flex;
+    margin-bottom: auto;
+    margin-top: auto;
     padding: 40px;
     gap: 48px;
     width: 100vw;

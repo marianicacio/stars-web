@@ -1,12 +1,13 @@
 import logo from "../../assets/images/logo-two.png"
+import exit from "../../assets/images/logout.png"
 import planets from "../../assets/images/planets.png"
-import entry from "../../assets/images/enter.png"
 import Button from "../../components/button/Button"
+import Card from "../../components/Card/Card"
 import Input from "../../components/Input/input"
 import { Link } from 'react-router-dom';
 import './styles.css'
 
-export default function EntryPage() {
+export default function ListPage() {
     return (
         <>
             <div className="container-entry">
@@ -17,18 +18,20 @@ export default function EntryPage() {
                         <Link to={'/list'}><a href="">Lista de Veículo</a></Link>
                         <Link to={'/exit'}><a href="">Saída</a></Link>
                     </nav>
-                <img src={planets} className="img-planets" alt="" />
+                    <img src={planets} className="img-planets" alt="" />
                 </header>
-                <section className="form-entry">
-                    <article className="container-title">
-                        <img src={entry} alt="" />
-                        <h2>Entrada</h2>
-                    </article>
-                    <form action="">
-                        <Input placeholder={"Placa do Veículo"} />
-                        <Button label={"Entrar"} color={"#595758"} />
-                    </form>
-                </section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lista de Veículo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <Card placa={"JKLIH-5F"} data={"27-08"} hora={"18:00"}/>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </>
     )
