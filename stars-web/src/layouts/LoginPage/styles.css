@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {  
+    width: 100vw;
+    background: linear-gradient(90deg, rgba(255, 238, 242, 0.6) 39.32%, rgba(255, 212, 222, 0.6) 60.65%, rgba(255, 190, 205, 0.6) 100%);
+}
+
+.container-login {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 93px;
+    position: relative;
+    height: 100%;
+}
+
+.planets-img {
+    position: absolute;
+    right: -40px;
+    top: 0;
+}
+
+.container-login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    width: 100%;
+}
+
+.footer-login {
+    display: flex;
+    flex-direction: column;
+    gap: 73px;
+    margin-top: 42px;
+}
+
+.footer-login a {
+    color: #FF92C2;
+    font-family: "inter";
+}
+
+.p-footer {
+    color: #595758;
+    font-family: "inter";
+}
+

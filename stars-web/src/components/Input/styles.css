@@ -7,18 +7,29 @@
 input {
     background-color: #FFC8FB;
     padding: 18px 20px;
-    width: 100%;
     border-radius: 10px;
     border: none;
+    width: 100%;
     color: #595758;
 }
 
 form {
-    width: 100%;
+    width: 100vw;
+}
+
+.container {
+    width: 70%;
+    position: relative;
+    align-items: center;
+}
+
+.invisible {
+    opacity: 0;
+    display: none;
 }
 
 .password {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
-    left: 2300px;
+    right: 15px;
 }
