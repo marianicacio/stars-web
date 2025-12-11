@@ -7,6 +7,43 @@ import './styles.css'
 
 export default function LoginPage() {
     
+     const navigate = useNavigate();
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [users, setUsers] = useState([]);
+    const [veiculos, setVeiculos] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await getVeiculos();
+            setVeiculos(data);
+        };
+        fetchData();
+    }, []);
+
+    const handleLogin = async () => {
+        console.log("Botão clicado");
+        try {
+            const users = await fetchUsers();
+
+            const user = users.find(
+                (u) => u.email === email && u.password === password
+            );
+
+            if (user) {
+                alert(`Bem-vindo, ${user.name}!`);
+                setEmail("");
+                setPassword("");
+                navigate("/list");
+            } else {
+                alert("Usuário ou senha incorretos");
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <div>
             <main>
