@@ -28,7 +28,12 @@ tr {
 
 tbody {
     width: 80%;
+    gap: 16px;
     display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 900px; 
+    padding-right: 6px;
 }
 
 tr {

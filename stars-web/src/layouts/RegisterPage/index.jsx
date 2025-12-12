@@ -4,7 +4,9 @@ import back from "../../assets/images/back.png"
 import Button from "../../components/button/Button"
 import Input from "../../components/Input/input"
 import './styles.css'
-import { Link } from 'react-router-dom';
+import { useState } from "react"
+import { useNavigate, Link } from "react-router-dom"
+import { registerUser } from "../../../../api"
 
 export default function RegisterPage() {
 
@@ -53,12 +55,12 @@ export default function RegisterPage() {
                     <img src={planets} alt="" className="planets-img" />
                     <img src={logo} alt="" />
                     <form onSubmit={(e) => e.preventDefault()} action="">
-                        <Input value={name} placeholder={"Nome"} />
-                        <Input value={email} placeholder={"E-mail"} />
-                        <Input value={password} placeholder={"Senha"} password={true} />
+                        <Input value={name} onChangeText={setName} placeholder={"Nome"} />
+                        <Input value={email} onChangeText={setEmail} placeholder={"E-mail"} />
+                        <Input value={password} onChangeText={setPassword} placeholder={"Senha"} password={true} />
                     </form>
                     <footer className="footer-register">
-                        <Button onPress={handleRegister} link={'/list'} label={"Criar"} color={"#FF92C2"} />
+                        <Button onClick={handleRegister} label={"Criar"} color={"#FF92C2"} />
                     </footer>
                 </section>
             </main>

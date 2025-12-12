@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 243px;
+    gap: 150px;
     width: 100%;
     background-color: #FFEEF2;
     padding: 23px 29px;
@@ -11,18 +11,14 @@
 }
 
 .container-card h1 {
+    width: 80px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #595758;
 }
 
-div {
-    display: flex;
-    gap: 15px;
-}
-
-div p {
+p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #595758;
 }

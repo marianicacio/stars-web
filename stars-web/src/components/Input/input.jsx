@@ -1,19 +1,21 @@
-import "./styles.css"
-import invisible from "../../assets/images/invisible.png"
+import "./styles.css";
+import invisible from "../../assets/images/invisible.png";
 
-export default function Input({ placeholder, password }) {
+export default function Input({ placeholder, password, value, onChangeText }) {
     return (
-        <form action="">
-            <div className="container">
-                <input type="text" placeholder={placeholder}/>
-                {
-                    password ? (
-                        <img src={invisible} className="password" alt="" />
-                    ) : (
-                        <img className="invisible" src={invisible} alt="" />
-                    )
-                }
-            </div>
-        </form>
-    )
+        <div className="container">
+            <input 
+                type={password ? "password" : "text"} 
+                placeholder={placeholder}
+                value={value}
+                onChange={(e) => onChangeText && onChangeText(e.target.value)}
+            />
+
+            {password ? (
+                <img src={invisible} className="password" alt="" />
+            ) : (
+                <img className="invisible" src={invisible} alt="" />
+            )}
+        </div>
+    );
 }

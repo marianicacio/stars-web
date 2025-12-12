@@ -2,12 +2,15 @@ import logo from "../../assets/images/logo.png"
 import planets from "../../assets/images/planets.png"
 import Button from "../../components/button/Button"
 import Input from "../../components/Input/input"
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { fetchUsers } from "../../../../api"
+import { fetchCars } from "../../../../api";
 import './styles.css'
 
 export default function LoginPage() {
     
-     const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -16,7 +19,7 @@ export default function LoginPage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getVeiculos();
+            const data = await fetchCars();
             setVeiculos(data);
         };
         fetchData();
@@ -44,19 +47,20 @@ export default function LoginPage() {
         }
     };
 
+
     return (
         <div>
             <main>
                 <section className="container-login">
                     <img src={planets} alt="" className="planets-img" />
                     <img src={logo} alt="" />
-                    <form action="">
+                    <form onSubmit={(e) => e.preventDefault()} action="">
                         <Input placeholder={"E-mail"} value={email} onChangeText={setEmail}/>
                         <Input placeholder={"Senha"} password={true} value={password} onChangeText={setPassword}/>
                     </form>
                     <footer className="footer-login">
-                        <Button onPress={handleLogin} link={'/list'} label={"Entrar"} color={"#FF92C2"} />
-                        <p className="p-footer">Não tem login! <Link to={'/register'}><a href="">Cadastre-se</a></Link></p>
+                        <Button onClick={handleLogin} label={"Entrar"} color={"#FF92C2"} />
+                        <p className="p-footer">Não tem login! <Link to={'/register'}>Cadastre-se</Link></p>
                     </footer>
                 </section>
             </main>
