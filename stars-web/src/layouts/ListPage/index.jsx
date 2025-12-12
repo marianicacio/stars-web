@@ -6,7 +6,7 @@ import Card from "../../components/Card/Card"
 import Input from "../../components/Input/input"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { fetchCars } from "../../../../api"
+import { fetchCars } from "../../../api"
 import './styles.css'
 
 export default function ListPage() {

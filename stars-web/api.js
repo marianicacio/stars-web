@@ -25,7 +25,7 @@ export const fetchCars = async () => {
   }
 };
 
-// Cadastro de usuário
+// Cadastro de usuários
 export const registerUser = async (email, name, password) => {
   console.log("Tentando cadastrar");
 
